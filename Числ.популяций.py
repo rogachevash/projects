@@ -48,5 +48,18 @@ zn_kolv=Entry(root,width=5,bg='white');zn_kolv.place(x=130,y=360)
 
 grafic=Button(root,text='График', width=10);grafic.place(x=60,y=400)
 
+def n_rost(event):
+    A=float(zn_a.get())
+    N=int(zn_kolv.get())
+    gertv=int(zn_spac.get())
+
+    for i in range(N):
+        gertv=gertv*A
+
+    schot["text"]=str(int(gertv))
+
+kn_rost.bind("<Button-1>", n_rost)
+
+
 
 root.mainloop()
